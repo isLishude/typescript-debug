@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "args": ["${relativeFile}"],
+      "name": "Current TS File",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-r", "ts-node/register"],
+      "cwd": "${workspaceFolder}",
+      "protocol": "inspector",
+      "env": {
+        "dev": "false",
+        "test": "fuck"
+      }
+    }
+  ]
+}
