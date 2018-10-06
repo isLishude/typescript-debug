@@ -6,7 +6,9 @@
     "no-console": false,
     "no-namespace": false,
     "max-classes-per-file": true,
-    "trailing-comma": false
+    "trailing-comma": false,
+    "no-unused-variable": true,
+    "no-unused-expression": true
   },
   "rulesDirectory": []
 }
