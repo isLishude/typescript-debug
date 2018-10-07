@@ -4,10 +4,12 @@
     {
       "type": "node",
       "request": "launch",
-      "args": ["${relativeFile}"],
       "name": "Current TS File",
       "runtimeExecutable": "node",
+      // 可在 process.execArgv 中获取
       "runtimeArgs": ["-r", "ts-node/register"],
+      // 可在 process.argv 中获取
+      "args": ["${relativeFile}"],
       "cwd": "${workspaceFolder}",
       "autoAttachChildProcesses": true,
       "protocol": "inspector",
