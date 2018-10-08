@@ -4,7 +4,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Current TS File",
+      "protocol": "inspector",
+      "name": "By ts-node",
       "runtimeExecutable": "node",
       // 可在 process.execArgv 中获取
       "runtimeArgs": ["-r", "ts-node/register"],
@@ -12,10 +13,18 @@
       "args": ["${relativeFile}"],
       "cwd": "${workspaceFolder}",
       "autoAttachChildProcesses": true,
+      "smartStep": true
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "protocol": "inspector",
-      "env": {
-        "dev": "true"
-      }
+      "name": "By Source Map",
+      "program": "${workspaceFolder}/${relativeFile}",
+      "sourceMaps": true,
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "preLaunchTask": "Build",
+      "smartStep": true
     }
   ]
 }
