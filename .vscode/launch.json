@@ -7,9 +7,9 @@
       "protocol": "inspector",
       "name": "By ts-node",
       "runtimeExecutable": "node",
-      // 可在 process.execArgv 中获取
+      // Pass to process.execArgv
       "runtimeArgs": ["-r", "ts-node/register"],
-      // 可在 process.argv 中获取
+      // Pass to process.argv
       "args": ["${relativeFile}"],
       "cwd": "${workspaceFolder}",
       "autoAttachChildProcesses": true,
