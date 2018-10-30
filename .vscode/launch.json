@@ -7,9 +7,7 @@
       "protocol": "inspector",
       "name": "By ts-node",
       "runtimeExecutable": "node",
-      // Pass to process.execArgv
       "runtimeArgs": ["-r", "ts-node/register"],
-      // Pass to process.argv
       "args": ["${relativeFile}"],
       "cwd": "${workspaceFolder}",
       "autoAttachChildProcesses": true,
